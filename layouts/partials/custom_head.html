@@ -5,6 +5,13 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <style>
   :root {
+    color-scheme: light;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #0000ff;
+    --visited-color: #0000ff;
+    --blockquote-color: #222;
     --font-main: InterDisplay, Inter, sans-serif;
     --font-secondary: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", monospace;
@@ -21,7 +28,8 @@
   }
   .tagline a {
     color: var(--heading-color);
-    text-decoration: underline dotted;
+    text-decoration: underline solid;
+    text-decoration-color: var(--link-color);
     text-underline-offset: 3px;
   }
   .tagline a:hover {

@@ -5,6 +5,6 @@ title = ""
   weight = 1
 +++
 
-**Five Pillars Compendium.**
+**Five Pillars Compendium®.**
 
 Film. Series. Books. Games. Music. One title, five pillars.

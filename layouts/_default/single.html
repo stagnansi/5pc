@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+<h1>{{ .Title }}</h1>
+<p>
+  <i>
+    <time datetime='{{ .Date.Format "2006-01-02" }}'>
+      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+    </time>
+  </i>
+</p>
+{{ end }}{{ end }}
+{{ if in (slice "film" "series" "books" "games" "music") .Type }}
+<h1>{{ .Title }}</h1>
+<p>
+  <i>
+    {{ if .Params.release }}<time datetime='{{ .Params.release }}'>Released {{ (time .Params.release).Format "2006.01.02" }}</time>{{ else }}<time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>{{ end }}
+  </i>
+</p>
+{{ end }}
+<content>
+  {{ .Content }}
+</content>
+{{ if eq .Type "blog" }}{{ if (.Param "enablePostNavigator")}}
+{{- partial "post_navigator.html" . -}}
+{{ end }}{{ end }}
+<p>
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}

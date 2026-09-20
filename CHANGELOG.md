@@ -3,18 +3,16 @@
 ## 2026-09-21
 
 ### Added
-- Section structure: film, series, books, games, music, blog, franchise, pillars, about
-- Nav menu (5 items): Home, Blog, Franchises, Pillars, About
-- Homepage with 5PC tagline
-- Pillars index page
-- About page
-- Franchises index page
+- First pillar post: 007 First Light (games)
+- Pillars index page listing all pillar posts by pillar
+- Pillars nav row at top of /pillars/
+- About page and layout
+- Franchises index page and layout
+- Site-wide custom_head: Inter Display, Inter, IBM Plex Mono fonts
+- single.html override: h1 + Released date for pillar posts
+- list.html override: release date fallback to publish date
 
 ### Changed
-- hugo.toml: title, author, copyright, description; locale replaces deprecated languageCode
-- Homepage rewritten from Bear demo to 5PC intro
-- content/blog/_index.md: added menu entry, weight 2
-
-### Removed
-- Bear Blog demo content (bear.md, hugo.md, markdown-syntax.md)
-- [permalinks] blog override in hugo.toml
+- Brand rule: 5PC and Five Pillars Compendium always written with ®
+- hugo.toml: timeZone Asia/Jakarta (fixes future-dated posts not rendering)
+- Homepage, About, Pillars content rewritten

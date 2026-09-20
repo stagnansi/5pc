@@ -1,0 +1,24 @@
+{{ define "main" }}
+<content>
+  {{ .Content }}
+  {{ $s := .Site }}
+  <nav>
+    {{ range slice "film" "series" "books" "games" "music" }}
+    {{ with $s.GetPage (printf "/%s" .) }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+    {{ end }}
+  </nav>
+  <ul>
+    {{ range slice "film" "series" "books" "games" "music" }}
+    {{ with $s.GetPage (printf "/%s" .) }}
+    {{ $pname := .Title }}
+    {{ $plink := .RelPermalink }}
+    {{ range .RegularPages }}
+    <li><a href="{{ $plink }}">{{ $pname }}</a> → <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </ul>
+</content>
+{{ end }}

@@ -1,0 +1,45 @@
+{{ define "main" }}
+<content>
+  {{ .Content }}
+  {{ $s := .Site }}
+  <p><a href="/franchise/">Browse franchises</a> →</p>
+  <h2>Latest Pillars</h2>
+  {{ $types := slice "film" "series" "books" "games" "music" }}
+  {{ $posts := where $s.RegularPages "Type" "in" $types }}
+  <ul style="list-style:none;padding:0;margin:1em 0;display:grid;grid-template-columns:max-content 1fr;column-gap:0.3em;">
+    {{ range first 3 $posts.ByDate.Reverse }}
+    <li style="display:contents;"><span style="font-weight:bold;">{{ .Type | title }}</span><span>→ <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
+    {{ else }}
+    <li>No posts yet</li>
+    {{ end }}
+  </ul>
+  <p><a href="/pillars/">See all</a> →</p>
+  <h2>Latest Blogs</h2>
+  <ul class="blog-posts">
+    {{ with $s.GetPage "/blog" }}
+    {{ range first 3 .RegularPages }}
+    <li>
+      <span>
+        <i>
+          <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>
+        </i>
+      </span>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ else }}
+    <li>No posts yet</li>
+    {{ end }}
+    {{ end }}
+  </ul>
+  <p><a href="/blog/">See all</a> →</p>
+  {{ with $s.GetPage "/franchise" }}
+  {{ with .Sections }}
+  <h2>Featured Franchise</h2>
+  {{ range first 1 . }}
+  <h3 style="margin-bottom:0.2em;"><a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none;">{{ .Title }}</a></h3>
+  <p style="margin-top:0;">{{ .Summary }}</p>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</content>
+{{ end }}

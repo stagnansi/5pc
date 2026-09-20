@@ -16,6 +16,8 @@ images = ["images/share.png"]
 title = "5PC®"
 
 [markup]
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     style = "friendly"
     lineNos = true

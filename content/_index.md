@@ -5,6 +5,4 @@ title = ""
   weight = 1
 +++
 
-**Five Pillars Compendium®.**
-
-Film. Series. Books. Games. Music. One title, five pillars.
+<p class="tagline"><a href="/film/">Film</a>. <a href="/series/">Series</a>. <a href="/books/">Books</a>. <a href="/games/">Games</a>. <a href="/music/">Music</a>. One title, five pillars.</p>

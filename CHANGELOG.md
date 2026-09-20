@@ -4,8 +4,7 @@
 
 ### Added
 - First pillar post: 007 First Light (games)
-- Pillars index page listing all pillar posts by pillar
-- Pillars nav row at top of /pillars/
+- Pillars index page with pillar nav row and aligned post list
 - About page and layout
 - Franchises index page and layout
 - Site-wide custom_head: Inter Display, Inter, IBM Plex Mono fonts

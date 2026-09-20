@@ -9,13 +9,14 @@
     {{ end }}
     {{ end }}
   </nav>
-  <ul>
+  <hr>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:max-content 1fr;column-gap:0.3em;">
     {{ range slice "film" "series" "books" "games" "music" }}
     {{ with $s.GetPage (printf "/%s" .) }}
     {{ $pname := .Title }}
     {{ $plink := .RelPermalink }}
     {{ range .RegularPages }}
-    <li><a href="{{ $plink }}">{{ $pname }}</a> → <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li style="display:contents;"><a href="{{ $plink }}">{{ $pname }}</a><span>→ <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
     {{ end }}
     {{ end }}
     {{ end }}

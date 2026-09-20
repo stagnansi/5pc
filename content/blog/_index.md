@@ -1,5 +1,6 @@
 +++
 title = "Blog"
-menu = "main"
-weight = 100
+[menu.main]
+  name = "Blog"
+  weight = 2
 +++

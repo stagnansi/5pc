@@ -15,6 +15,8 @@
   <i>
     {{ if .Params.release }}<time datetime='{{ .Params.release }}'>Released {{ (time .Params.release).Format "2006.01.02" }}</time>{{ else }}<time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>{{ end }}
   </i>
+  <span>→</span>
+  <a href="/{{ .Type }}/">{{ .Type | title }}</a>
 </p>
 {{ end }}
 <content>

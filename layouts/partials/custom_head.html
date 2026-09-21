@@ -43,26 +43,22 @@
     padding: 20px 0;
     text-align: left;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 0.2em;
-  }
-  .footer-year {
-    font-family: var(--font-main);
-    color: var(--heading-color);
-  }
-  .footer-slash {
-    font-family: var(--font-secondary);
-    color: var(--text-color);
-    font-size: 1.4em;
-    line-height: 1;
-
   }
   .footer-brand {
     font-family: var(--font-main);
+    font-weight: 900;
+    line-height: 0.9;
   }
   .to-top {
-    color: var(--link-color);
+    font-family: var(--font-secondary);
+    color: var(--heading-color);
     text-decoration: none;
+    line-height: 1;
+    font-size: 1.5em;
   }
   .to-top:hover {
     text-decoration: none;
@@ -121,8 +117,6 @@
     position: absolute;
     left: 0;
     color: var(--text-color);
-  }
-  content ul:not(.blog-posts):not([style*="grid"]) li::before {
     font-family: var(--font-secondary);
   }
 </style>

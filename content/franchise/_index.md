@@ -5,4 +5,4 @@ title = "Franchises"
   weight = 3
 +++
 
-Franchise hubs — one title, explored across all five pillars.
+Franchise hubs, one title at a time.

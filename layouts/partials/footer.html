@@ -1,0 +1,14 @@
+<footer>
+  <span class="footer-brand"><a href="https://bsky.app/profile/5pc.nordra.me">Five Pillars</a> <a href="https://x.com/compppendium">Compendium</a>®</span>
+  <span class="footer-slash">—</span>
+  <span class="footer-year">{{ now.Format "2006" }}</span>
+  <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+</footer>
+<script>
+(function(){
+  function check(){document.body.classList.toggle("is-scrollable", document.documentElement.scrollHeight > window.innerHeight);}
+  check();
+  window.addEventListener("resize", check);
+  window.addEventListener("load", check);
+})();
+</script>

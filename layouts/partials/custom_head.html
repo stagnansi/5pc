@@ -39,4 +39,36 @@
   .tagline a:hover {
     text-decoration: none;
   }
+  footer {
+    padding: 20px 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .footer-year {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+  .footer-slash {
+    font-family: var(--font-secondary);
+    font-weight: 100;
+    color: var(--text-color);
+    opacity: 0.5;
+    font-size: 1.4em;
+    line-height: 1;
+  }
+  .footer-brand {
+    font-family: var(--font-main);
+  }
+  .to-top {
+    color: var(--heading-color);
+    text-decoration: none;
+  }
+  .to-top:hover {
+    text-decoration: none;
+  }
+  body:not(.is-scrollable) .to-top {
+    display: none;
+  }
 </style>

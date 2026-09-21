@@ -3,11 +3,11 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ if eq .RelPermalink "/franchise/" }}
-  <ul>
-    {{ range .Sections }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
-  </ul>
+  {{ range .Sections }}
+  <h3 style="margin-bottom:0.2em;"><a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none;">{{ .Title }}</a></h3>
+  <p style="margin-top:0;">{{ .Params.description }}</p>
+  <p><a href="{{ .RelPermalink }}">Explore</a> →</p>
+  {{ end }}
   {{ else }}
   {{ $fid := .Params.franchise_id }}
   {{ $blogs := where .Site.RegularPages "Type" "blog" }}

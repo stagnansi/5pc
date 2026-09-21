@@ -52,17 +52,16 @@
   }
   .footer-slash {
     font-family: var(--font-secondary);
-    font-weight: 100;
     color: var(--text-color);
-    opacity: 0.5;
     font-size: 1.4em;
     line-height: 1;
+    opacity: 0.5;
   }
   .footer-brand {
     font-family: var(--font-main);
   }
   .to-top {
-    color: var(--heading-color);
+    color: var(--link-color);
     text-decoration: none;
   }
   .to-top:hover {
@@ -70,5 +69,60 @@
   }
   body:not(.is-scrollable) .to-top {
     display: none;
+  }
+  details {
+    border-bottom: 1px dashed var(--text-color);
+    padding: 0.6em 0;
+  }
+  details summary {
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: var(--heading-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  details summary::after {
+    content: "+";
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1;
+  }
+  details[open] summary::after {
+    content: "−";
+  }
+  details:hover summary {
+    color: var(--link-color);
+  }
+  details ul {
+    margin: 0.4em 0 0 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  details li {
+    font-family: var(--font-mono);
+  }
+  content ul:not(.blog-posts):not([style*="grid"]) {
+    list-style: none;
+    padding-left: 0;
+  }
+  content ul:not(.blog-posts):not([style*="grid"]) li {
+    padding-left: 1.4em;
+    position: relative;
+  }
+  content ul:not(.blog-posts):not([style*="grid"]) li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--text-color);
+  }
+  content ul:not(.blog-posts):not([style*="grid"]) li::before {
+    font-family: var(--font-secondary);
   }
 </style>

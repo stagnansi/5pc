@@ -1,6 +1,7 @@
 +++
 title = "Why Bond Skipped TV"
 date = 2026-09-21
+franchise = "007"
 +++
 
 There is a strange gap in the pop culture landscape. We live in an era of infinite content. Every franchise with a pulse gets a streaming spin-off. Star Wars has a dozen shows. Marvel has more television than anyone can reasonably watch. Even Harry Potter, a property that spent years resisting expansion, is now getting a television reboot. But James Bond, a franchise that has been running for over sixty years and has grossed billions, has never had a proper television series.

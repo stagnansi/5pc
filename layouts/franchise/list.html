@@ -1,10 +1,32 @@
 {{ define "main" }}
 <content>
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
+  {{ if eq .RelPermalink "/franchise/" }}
   <ul>
     {{ range .Sections }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
   </ul>
+  {{ else }}
+  {{ $fid := .Params.franchise_id }}
+  {{ $blogs := where .Site.RegularPages "Type" "blog" }}
+  {{ $related := where $blogs "Params.franchise" $fid }}
+  {{ with $related }}
+  <h2>Related Blogs</h2>
+  <ul class="blog-posts">
+    {{ range .ByDate.Reverse }}
+    <li>
+      <span>
+        <i>
+          <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>
+        </i>
+      </span>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  {{ end }}
 </content>
 {{ end }}

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-22
+
+### Added
+- Pillar post: Adele - Skyfall (music)
+
+### Changed
+- Music pillar slug follows title format: adele-skyfall-2012
+- Pillar post metadata: split into two lines, add franchise backlink with title (from franchise _index.md)
+
 ## 2026-09-21
 
 ### Added
@@ -29,9 +38,3 @@
 ### Fixed
 - Future-dated posts not rendering
 - Nested footer element in footer partial
-
-### Changed
-- Pillar post metadata: split into two lines, add franchise backlink with title (from franchise _index.md)
-
-### Changed
-- Music pillar slug follows title format: adele-skyfall-2012

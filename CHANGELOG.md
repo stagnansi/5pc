@@ -29,3 +29,6 @@
 ### Fixed
 - Future-dated posts not rendering
 - Nested footer element in footer partial
+
+### Changed
+- Pillar post metadata: split into two lines, add franchise backlink with title (from franchise _index.md)

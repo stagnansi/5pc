@@ -32,3 +32,6 @@
 
 ### Changed
 - Pillar post metadata: split into two lines, add franchise backlink with title (from franchise _index.md)
+
+### Changed
+- Music pillar slug follows title format: adele-skyfall-2012

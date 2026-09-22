@@ -178,7 +178,7 @@ The franchise has been running since 1953, which means it has outlived the Cold 
 <li><strong>Die Another Day</strong> (Madonna, 2002)</li>
 <li><strong>You Know My Name</strong> (Chris Cornell, 2006)</li>
 <li><strong>Another Way to Die</strong> (Jack White and Alicia Keys, 2008)</li>
-<li><strong>Skyfall</strong> (Adele, 2012)</li>
+<li><strong><a href="/music/adele-skyfall-2012/">Skyfall</a></strong> (Adele, 2012)</li>
 <li><strong>Writing's on the Wall</strong> (Sam Smith, 2015)</li>
 <li><strong>No Time to Die</strong> (Billie Eilish, 2021)</li>
 </ul>

@@ -34,10 +34,8 @@
 - Homepage, About, Pillars, Franchise hub content rewritten
 - Blog essay: changed editorial "we" to third person
 - Franchises index description: removed em dash
+- Franchise hub 007: all pillars sorted by release year
 
 ### Fixed
 - Future-dated posts not rendering
 - Nested footer element in footer partial
-
-### Changed
-- Franchise hub 007: all pillars sorted by release year

@@ -25,6 +25,7 @@ The franchise has been running since 1953, which means it has outlived the Cold 
 <li><strong>From Russia with Love</strong> (1963)</li>
 <li><strong>Goldfinger</strong> (1964)</li>
 <li><strong>Thunderball</strong> (1965)</li>
+<li><strong>Casino Royale</strong> (1967)</li>
 <li><strong>You Only Live Twice</strong> (1967)</li>
 <li><strong>On Her Majesty's Secret Service</strong> (1969)</li>
 <li><strong>Diamonds Are Forever</strong> (1971)</li>
@@ -34,6 +35,7 @@ The franchise has been running since 1953, which means it has outlived the Cold 
 <li><strong>Moonraker</strong> (1979)</li>
 <li><strong>For Your Eyes Only</strong> (1981)</li>
 <li><strong>Octopussy</strong> (1983)</li>
+<li><strong>Never Say Never Again</strong> (1983)</li>
 <li><strong>A View to a Kill</strong> (1985)</li>
 <li><strong>The Living Daylights</strong> (1987)</li>
 <li><strong>Licence to Kill</strong> (1989)</li>
@@ -46,8 +48,6 @@ The franchise has been running since 1953, which means it has outlived the Cold 
 <li><strong>Skyfall</strong> (2012)</li>
 <li><strong>Spectre</strong> (2015)</li>
 <li><strong>No Time to Die</strong> (2021)</li>
-<li><strong>Casino Royale</strong> (1967)</li>
-<li><strong>Never Say Never Again</strong> (1983)</li>
 </ul>
 </details>
 
@@ -107,11 +107,14 @@ The franchise has been running since 1953, which means it has outlived the Cold 
 <li><strong>The Man with the Red Tattoo</strong> (Benson, 2002)</li>
 <li><strong>Die Another Day</strong> (Benson, 2002)</li>
 <li><strong>SilverFin</strong> (Higson, 2005)</li>
+<li><strong>Guardian Angel</strong> (Weinberg, 2005)</li>
 <li><strong>Blood Fever</strong> (Higson, 2006)</li>
+<li><strong>Secret Servant</strong> (Weinberg, 2006)</li>
 <li><strong>Double or Die</strong> (Higson, 2007)</li>
 <li><strong>Hurricane Gold</strong> (Higson, 2007)</li>
 <li><strong>By Royal Command</strong> (Higson, 2008)</li>
 <li><strong>Devil May Care</strong> (Faulks, 2008)</li>
+<li><strong>Final Fling</strong> (Weinberg, 2008)</li>
 <li><strong>Carte Blanche</strong> (Deaver, 2011)</li>
 <li><strong>Solo</strong> (Boyd, 2013)</li>
 <li><strong>Shoot to Kill</strong> (Cole, 2014)</li>
@@ -121,9 +124,6 @@ The franchise has been running since 1953, which means it has outlived the Cold 
 <li><strong>Red Nemesis</strong> (Cole, 2017)</li>
 <li><strong>Forever and a Day</strong> (Horowitz, 2018)</li>
 <li><strong>With a Mind to Kill</strong> (Horowitz, 2022)</li>
-<li><strong>Guardian Angel</strong> (Weinberg, 2005)</li>
-<li><strong>Secret Servant</strong> (Weinberg, 2006)</li>
-<li><strong>Final Fling</strong> (Weinberg, 2008)</li>
 </ul>
 </details>
 

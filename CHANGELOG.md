@@ -38,3 +38,6 @@
 ### Fixed
 - Future-dated posts not rendering
 - Nested footer element in footer partial
+
+### Changed
+- Franchise hub 007: all pillars sorted by release year

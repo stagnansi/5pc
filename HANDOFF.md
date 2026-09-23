@@ -183,3 +183,29 @@ Hugo:
 
 Layout:
 - baseof.html already wraps content in footer tag. Partial footer.html must not add another footer tag (nested).
+
+## Rules for AI Assistants
+
+- Do not improvise. If a request is ambiguous, ask with concrete options before writing commands.
+- Do not overreach. If user asks to change one thing, change only that thing. Do not refactor adjacent code.
+- Never commit without updating CHANGELOG.md in the same commit.
+- Never skip the clipboard pipe on commands with long output.
+- Ask before deleting files or reverting user work.
+- The user has corrected earlier mistakes before. Read their feedback literally, do not interpret loosely.
+
+## Aliases
+
+In ~/.bashrc:
+- `p` = `cd ~/5pc`
+- `h` = `hugo server --noBuildLock`
+- `sc` = `termux-clipboard-set`
+- `gc` = `termux-clipboard-get`
+
+## Design Decisions (Why)
+
+- Footer stacked brand: user preference for vertical compact footer.
+- Back-to-top via #top anchor: no JavaScript needed for the scroll action, only for conditional visibility.
+- No em dash: user style rule, applies to all writing including changelog and handoff.
+- Blog titles short: pattern established with "Why Bond Skipped TV".
+- Music title format "Artist - Song (Year)": distinguishes music pillar from other pillars.
+- No dark mode: user wants light only, forced via color-scheme and variable overrides.

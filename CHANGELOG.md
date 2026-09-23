@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.1] - 2026-09-23
+
+### Added
+- README.md: project overview, stack, local dev, structure, conventions
+
 ## [1.4.0] - 2026-09-23
 
 ### Added
@@ -78,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - hugo.toml: title, author, copyright, description
 - Homepage tagline and Pillars index page
 
-[Unreleased]: https://github.com/stagnansi/5pc/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/stagnansi/5pc/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/stagnansi/5pc/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/stagnansi/5pc/compare/v1.3.2...v1.4.0
 [1.3.2]: https://github.com/stagnansi/5pc/compare/v1.3.1...v1.3.2
 [1.3.1]: https://github.com/stagnansi/5pc/compare/v1.3.0...v1.3.1

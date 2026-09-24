@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ### Changed
+- Layout files: header comments for documentation
+
+
+### Changed
 - audit.sh: standards compliance (set -euo pipefail, quoted variables, read loop)
 
 

@@ -1,3 +1,4 @@
+{{/* Single page template. Two branches: blog essays (h1 + date) and pillar posts (h1 + release date + franchise/pillar breadcrumb). Pillar branch triggers for types listed in site.Params.pillars. */}}
 {{ define "main" }}
 {{ if eq .Type "blog" }}{{ if not .Params.menu }}
 <h1>{{ .Title }}</h1>

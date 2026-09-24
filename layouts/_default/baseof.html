@@ -1,3 +1,4 @@
+{{/* Site-level override of the theme base template. Sole change from theme: uses .Site.Language.Locale instead of deprecated .Site.LanguageCode. Wraps every page in header, main, footer. */}}
 <!DOCTYPE html>
 <html lang="{{ with .Site.Language.Locale }}{{ . }}{{ else }}en-US{{ end }}">
 

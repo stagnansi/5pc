@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ### Changed
+- hugo.toml: pillars list moved to [params] (DRY)
+- Layouts: read pillars from site.Params.pillars instead of inline slices
+- audit.sh: reduce false positives
+
+
+### Changed
 - Homepage Featured Franchise: shows most recently added franchise (by date)
 
 ## [1.5.0] - 2026-09-24

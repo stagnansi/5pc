@@ -9,7 +9,7 @@
   </i>
 </p>
 {{ end }}{{ end }}
-{{ if in (slice "film" "series" "books" "games" "music") .Type }}
+{{ if in site.Params.pillars .Type }}
 <h1>{{ .Title }}</h1>
 <p>
   <i>

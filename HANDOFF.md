@@ -209,3 +209,17 @@ In ~/.bashrc:
 - Blog titles short: pattern established with "Why Bond Skipped TV".
 - Music title format "Artist - Song (Year)": distinguishes music pillar from other pillars.
 - No dark mode: user wants light only, forced via color-scheme and variable overrides.
+
+## Audit Command
+
+When user says "audit", run the standard audit script. Checks:
+- Duplicate content files (same slug pattern, or same title)
+- Duplicate CSS rules in custom_head.html
+- Unused layout files (not called by any template)
+- Unused partials
+- Unused static assets
+- Orphan content (posts not linked from any nav, hub, or homepage)
+- Duplicate front matter entries
+- Files in working tree not tracked or ignored
+
+Report findings, do not auto-fix. Wait for user decision.

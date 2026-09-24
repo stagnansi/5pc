@@ -1,6 +1,6 @@
 {{/* Single page template. Two branches: blog essays (h1 + date) and pillar posts (h1 + release date + franchise/pillar breadcrumb). Pillar branch triggers for types listed in site.Params.pillars. */}}
 {{ define "main" }}
-{{ if eq .Type "blog" }}{{ if not .Params.menu }}
+{{ if and (eq .Type "blog") (not .Params.menu) }}
 <h1>{{ .Title }}</h1>
 <p>
   <i>
@@ -9,7 +9,7 @@
     </time>
   </i>
 </p>
-{{ end }}{{ end }}
+{{ end }}
 {{ if in site.Params.pillars .Type }}
 <h1>{{ .Title }}</h1>
 <p>
@@ -25,9 +25,9 @@
 <content>
   {{ .Content }}
 </content>
-{{ if eq .Type "blog" }}{{ if (.Param "enablePostNavigator")}}
+{{ if and (eq .Type "blog") (.Param "enablePostNavigator") }}
 {{- partial "post_navigator.html" . -}}
-{{ end }}{{ end }}
+{{ end }}
 <p>
   {{ range (.GetTerms "tags") }}
   <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>

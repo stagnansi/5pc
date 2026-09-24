@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+### Changed
+- single.html: nested if merged with and() for readability
+
+
 ### Fixed
 - Pillar list: double arrow after inline style refactor
 

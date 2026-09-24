@@ -2,6 +2,7 @@
 title = "Game of Thrones"
 description = "George R.R. Martin's epic fantasy saga of Westeros, spanning books, television, film, games, and music."
 franchise_id = "game-of-thrones"
+date = 2026-09-24
 +++
 
 Game of Thrones is a fantasy franchise created by George R.R. Martin, beginning with the novel A Game of Thrones in 1996. The story is set on the fictional continents of Westeros and Essos, where noble houses compete for the Iron Throne while an ancient threat stirs beyond the Wall. The franchise includes the ongoing A Song of Ice and Fire book series, the HBO television adaptation, prequel series, video games, and a theatrical film in development.

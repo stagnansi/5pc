@@ -2,6 +2,7 @@
 title = "James Bond 007"
 description = "Ian Fleming's spy has lived in films, novels, games, and theme songs since 1953. This hub gathers all five angles in one place."
 franchise_id = "007"
+date = 2026-09-21
 +++
 
 James Bond 007 is a British spy fiction franchise created by Ian Fleming in 1953. It is one of the longest-running media franchises in history. The character is a Secret Intelligence Service agent known by the code number 007, and he has appeared in 25 Eon Productions films, dozens of novels, and more than 30 video games. The franchise spans film, television, books, games, and music, and has grossed over $7 billion worldwide.

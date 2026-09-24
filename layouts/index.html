@@ -35,7 +35,7 @@
   {{ with $s.GetPage "/franchise" }}
   {{ with .Sections }}
   <h2>Featured Franchise</h2>
-  {{ range first 1 . }}
+  {{ range first 1 .ByDate.Reverse }}
   <h3 style="margin-bottom:0.2em;"><a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none;">{{ .Title }}</a></h3>
   <p style="margin-top:0;">{{ .Params.description }}</p>
   <p><a href="{{ .RelPermalink }}">Explore</a> →</p>

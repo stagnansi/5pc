@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+### Fixed
+- Pillar list: double arrow after inline style refactor
+
+
 ### Changed
 - Layout files: header comments for documentation
 

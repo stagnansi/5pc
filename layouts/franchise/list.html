@@ -5,9 +5,11 @@
   {{ .Content }}
   {{ if eq .RelPermalink "/franchise/" }}
   {{ range .Sections }}
-  <h3 style="margin-bottom:0.2em;"><a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none;">{{ .Title }}</a></h3>
-  <p style="margin-top:0;">{{ .Params.description }}</p>
+  <div class="franchise-card">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Params.description }}</p>
   <p><a href="{{ .RelPermalink }}">Explore</a> →</p>
+  </div>
   {{ end }}
   {{ else }}
   {{ $fid := .Params.franchise_id }}

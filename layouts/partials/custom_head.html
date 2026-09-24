@@ -105,19 +105,44 @@
   details li {
     font-family: var(--font-mono);
   }
-  content ul:not(.blog-posts):not([style*="grid"]) {
+  content ul:not(.blog-posts):not(.pillar-list) {
     list-style: none;
     padding-left: 0;
   }
-  content ul:not(.blog-posts):not([style*="grid"]) li {
+  content ul:not(.blog-posts):not(.pillar-list) li {
     padding-left: 1.4em;
     position: relative;
   }
-  content ul:not(.blog-posts):not([style*="grid"]) li::before {
+  content ul:not(.blog-posts):not(.pillar-list) li::before {
     content: "→";
     position: absolute;
     left: 0;
     color: var(--text-color);
     font-family: var(--font-secondary);
+  }
+
+  .pillar-list {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: 0.3em;
+  }
+  .pillar-list li {
+    display: contents;
+  }
+  .pillar-name {
+    font-weight: bold;
+  }
+  .franchise-card h3 {
+    margin-bottom: 0.2em;
+  }
+  .franchise-card h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .franchise-card p:first-of-type {
+    margin-top: 0;
   }
 </style>

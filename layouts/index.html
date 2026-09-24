@@ -7,9 +7,9 @@
   <h2>Latest Pillars</h2>
   {{ $types := site.Params.pillars }}
   {{ $posts := where $s.RegularPages "Type" "in" $types }}
-  <ul style="list-style:none;padding:0;margin:1em 0;display:grid;grid-template-columns:max-content 1fr;column-gap:0.3em;">
+  <ul class="pillar-list">
     {{ range first 3 $posts.ByDate.Reverse }}
-    <li style="display:contents;"><span style="font-weight:bold;">{{ .Type | title }}</span><span>→ <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
+    <li><span class="pillar-name">{{ .Type | title }}</span><span>→ <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
     {{ else }}
     <li>No posts yet</li>
     {{ end }}
@@ -37,9 +37,11 @@
   {{ with .Sections }}
   <h2>Featured Franchise</h2>
   {{ range first 1 .ByDate.Reverse }}
-  <h3 style="margin-bottom:0.2em;"><a href="{{ .RelPermalink }}" style="color:inherit;text-decoration:none;">{{ .Title }}</a></h3>
-  <p style="margin-top:0;">{{ .Params.description }}</p>
+  <div class="franchise-card">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p>{{ .Params.description }}</p>
   <p><a href="{{ .RelPermalink }}">Explore</a> →</p>
+  </div>
   {{ end }}
   {{ end }}
   {{ end }}

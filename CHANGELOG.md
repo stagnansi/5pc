@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ### Changed
+- audit.sh: standards compliance (set -euo pipefail, quoted variables, read loop)
+
+
+### Changed
 - hugo.toml: pillars list moved to [params] (DRY)
 - Layouts: read pillars from site.Params.pillars instead of inline slices
 - audit.sh: reduce false positives

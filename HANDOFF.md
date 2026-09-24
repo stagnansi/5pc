@@ -223,3 +223,7 @@ When user says "audit", run the standard audit script. Checks:
 - Files in working tree not tracked or ignored
 
 Report findings, do not auto-fix. Wait for user decision.
+
+### Changelog Updates
+
+Always rewrite the entire CHANGELOG.md when adding new entries. Never append incrementally (awk/sed append causes duplicate section headers). Read current CHANGELOG first, merge new entries into existing sections, write whole file.

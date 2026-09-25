@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Background color: #fafafa (soft off-white)
-
+- CSS: font smoothing, text-size-adjust, text-wrap balance
 
 ## [1.5.1] - 2026-09-24
 

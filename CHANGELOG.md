@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Background color: #fafafa (soft off-white)
+
+
 ## [1.5.1] - 2026-09-24
 
 ### Changed

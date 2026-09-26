@@ -39,7 +39,7 @@ Open http://localhost:1313 in a browser.
     layouts/          Site-level layout overrides
     static/           Static assets
     hugo.toml         Site config
-    CHANGELOG.md      Version history (Keep a Changelog + SemVer)
+    CHANGELOG.md      Changelog by date
     HANDOFF.md        Project handoff for future work
 
 ## Content Conventions
@@ -51,14 +51,10 @@ Open http://localhost:1313 in a browser.
 - Pillar posts: intro, For Newcomers (except music), The Story
 - Music title format: Artist - Song (Year)
 
-## Versioning
-
-SemVer (MAJOR.MINOR.PATCH). Tag only at milestones, not every push. See CHANGELOG.md for details.
-
 ## Documentation
 
 - HANDOFF.md: full project handoff covering infrastructure, work rules, conventions, design system, and gotchas
-- CHANGELOG.md: version history
+- CHANGELOG.md: changelog by date
 
 ## Contact
 

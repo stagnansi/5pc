@@ -49,7 +49,7 @@ layouts/                 Site-level overrides (not in theme)
     custom_head.html     Fonts, colors, CSS (site-wide)
     footer.html          Custom footer
 hugo.toml                Site config
-CHANGELOG.md             Keep a Changelog + SemVer
+CHANGELOG.md             Changelog by date
 HANDOFF.md               This file
 
 ## Work Rules
@@ -70,7 +70,6 @@ Hugo server is foreground. Kill with Ctrl+C before running other commands.
 Commit ritual:
 - Always update CHANGELOG.md in the same commit as code/content changes
 - Push to main after every milestone
-- Tag releases per version rules below
 
 ## Content Conventions
 
@@ -136,18 +135,6 @@ All in layouts/ (site-level, not in theme):
 - about/list.html: h1 + content
 - partials/custom_head.html: all site CSS and font links
 - partials/footer.html: footer structure (baseof already wraps in footer tag)
-
-## Version Rules
-
-SemVer (MAJOR.MINOR.PATCH). Tag only at milestones, not every push.
-
-- MAJOR: breaking change (URL pattern change, theme replacement, section removal)
-- MINOR: new feature or batch (new franchise hub, homepage redesign, 3 or more pillar posts)
-- PATCH: 1-2 posts, bug fixes, small tweaks
-
-Cosmetic-only pushes do not trigger a version. They go into [Unreleased] in CHANGELOG.md until the next milestone.
-
-Tag format: annotated tags, vX.Y.Z. Push with git push origin --tags. Create GitHub release with gh release create.
 
 ## Current State
 

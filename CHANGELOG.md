@@ -16,14 +16,14 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Smooth scroll via CSS (prefers-reduced-motion)
 
 ### Removed
-- OG image (share.png) from config
+- OG image from config and unused share.png
 - Semantic versioning and GitHub releases
 - CSS from Web Interface Guidelines
 - Inline JS toggle
 - Franchise card wrapper div and CSS (replaced by blockquote)
 
 ### Changed
-- Arrows across site use heading color (.arrow class)
+- Arrows across site use heading color (.arrow class), including pillars list
 - Background color back to #fff
 - Footer: centered custom
 - Franchise index cards: blockquote layout, no italic, margin reset

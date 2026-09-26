@@ -11,7 +11,7 @@ find content -type f -name "*.md" ! -name "_index.md" -exec basename {} \; | sor
 
 echo ""
 echo "=== DUPLICATE TITLES ==="
-grep -rh "^title" content --include="*.md" | sort | uniq -d || true
+grep -rh "^title" content --include="*.md" --exclude="_index.md" | sort | uniq -d || true
 
 echo ""
 echo "=== DUPLICATE CSS RULES (excluding pseudo-class) ==="

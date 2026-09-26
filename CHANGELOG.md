@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.2] - 2026-09-26
+
 ### Added
 - Pillar post: Game of Thrones (series)
 - Franchise hub GoT: backlink to series post
@@ -110,7 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - hugo.toml: title, author, copyright, description
 - Homepage tagline and Pillars index page
 
-[Unreleased]: https://github.com/stagnansi/5pc/compare/v1.5.1...HEAD
+[Unreleased]: https://github.com/stagnansi/5pc/compare/v1.5.2...HEAD
+[1.5.2]: https://github.com/stagnansi/5pc/compare/v1.5.1...v1.5.2
 [1.5.1]: https://github.com/stagnansi/5pc/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/stagnansi/5pc/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/stagnansi/5pc/compare/v1.4.0...v1.4.1

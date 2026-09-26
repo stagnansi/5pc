@@ -21,7 +21,7 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Homepage Featured Franchise: shows most recently added franchise
 - hugo.toml: pillars list moved to [params]
 - Layouts: read pillars from site.Params.pillars
-- audit.sh: standards compliance
+- audit.sh: standards compliance and exclude _index.md from title check
 - Layout files: header comments
 - single.html: nested if merged with and()
 

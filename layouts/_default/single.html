@@ -19,7 +19,7 @@
 </p>
 <p>
   {{ $f := .Params.franchise }}
-  {{ if $f }}{{ with site.GetPage (printf "/franchise/%s" $f) }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> → {{ end }}{{ end }}<a href="/{{ $.Type }}/">{{ $.Type | title }}</a>
+  {{ if $f }}{{ with site.GetPage (printf "/franchise/%s" $f) }}<a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="arrow">→</span> {{ end }}{{ end }}<a href="/{{ $.Type }}/">{{ $.Type | title }}</a>
 </p>
 {{ end }}
 <content>
@@ -33,17 +33,10 @@
 {{ $related := where $all "Type" "in" site.Params.pillars }}
 {{ if gt (len $related) 1 }}
 <h2>More in {{ with site.GetPage (printf "/franchise/%s" $fid) }}{{ .Title }}{{ else }}{{ $fid }}{{ end }}</h2>
-<ul class="blog-posts">
+<ul class="pillar-list">
 {{ range sort $related "Date" "desc" }}
 {{ if ne .Permalink $currentPermalink }}
-<li>
-  <span>
-    <i>
-      {{ if .Params.release }}<time datetime='{{ .Params.release }}'>{{ (time .Params.release).Format "2006.01.02" }}</time>{{ else }}<time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>{{ end }}
-    </i>
-  </span>
-  <a href="{{ .Permalink }}">{{ .Title }}</a>
-</li>
+<li><span class="pillar-name"><a href="/{{ .Type }}/">{{ .Type | title }}</a></span><span><span class="arrow">→</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
 {{ end }}
 {{ end }}
 </ul>

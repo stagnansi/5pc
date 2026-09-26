@@ -3,18 +3,18 @@
 <content>
   {{ .Content }}
   {{ $s := .Site }}
-  <p><a href="/franchise/">Browse franchises</a> →</p>
+  <p><a href="/franchise/">Browse franchises</a> <span class="arrow">→</span></p>
   <h2>Latest Pillars</h2>
   {{ $types := site.Params.pillars }}
   {{ $posts := where $s.RegularPages "Type" "in" $types }}
   <ul class="pillar-list">
     {{ range first 3 $posts.ByDate.Reverse }}
-    <li><span class="pillar-name">{{ .Type | title }}</span><span>→ <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
+    <li><span class="pillar-name">{{ .Type | title }}</span><span><span class="arrow">→</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
     {{ else }}
     <li>No posts yet</li>
     {{ end }}
   </ul>
-  <p><a href="/pillars/">See all</a> →</p>
+  <p><a href="/pillars/">See all</a> <span class="arrow">→</span></p>
   <h2>Latest Blogs</h2>
   <ul class="blog-posts">
     {{ with $s.GetPage "/blog" }}
@@ -32,7 +32,7 @@
     {{ end }}
     {{ end }}
   </ul>
-  <p><a href="/blog/">See all</a> →</p>
+  <p><a href="/blog/">See all</a> <span class="arrow">→</span></p>
   {{ with $s.GetPage "/franchise" }}
   {{ with .Sections }}
   <h2>Featured Franchise</h2>
@@ -40,7 +40,7 @@
   <blockquote>
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
   <p>{{ .Params.description }}</p>
-  <p><a href="{{ .RelPermalink }}">Explore</a> →</p>
+  <p><a href="{{ .RelPermalink }}">Explore</a> <span class="arrow">→</span></p>
   </blockquote>
   {{ end }}
   {{ end }}

@@ -5,7 +5,10 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 ## 2026-09-26
 
 ### Added
-- Section "More in [Franchise]" on pillar posts (cross-link to sibling posts)
+- Pillar post: House of the Dragon (series)
+- Franchise hub GoT: backlink to House of the Dragon
+- Section "More in [Franchise]" on pillar posts, using pillar-list format
+- Pillar name in More-in list backlinks to its section
 - Descriptions in pillar post front matter (better OG/meta preview)
 - Custom footer: centered brand (Bluesky + X links), em dash, year with slashed zero, back-to-top anchor
 - Pillar post: Game of Thrones (series)
@@ -20,6 +23,7 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Franchise card wrapper div and CSS (replaced by blockquote)
 
 ### Changed
+- Arrows across site use heading color (.arrow class)
 - Background color back to #fff
 - Footer: centered custom
 - Franchise index cards: blockquote layout, no italic, margin reset

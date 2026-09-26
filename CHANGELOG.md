@@ -18,10 +18,11 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 ### Changed
 - Background color back to #fff
 - Footer: centered custom
+- Franchise 007 description shortened for card display (line-clamp removed)
 - Homepage Featured Franchise: shows most recently added franchise
 - hugo.toml: pillars list moved to [params]
 - Layouts: read pillars from site.Params.pillars
-- audit.sh: standards compliance and exclude _index.md from title check
+- audit.sh: exclude _index.md from title check
 - Layout files: header comments
 - single.html: nested if merged with and()
 

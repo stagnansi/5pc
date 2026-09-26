@@ -1,6 +1,6 @@
 +++
 title = "James Bond 007"
-description = "Ian Fleming's spy has lived in films, novels, games, and theme songs since 1953. This hub gathers all five angles in one place."
+description = "British spy fiction since 1953. From Fleming's novels to modern films, games, and theme songs."
 franchise_id = "007"
 date = 2026-09-21
 +++

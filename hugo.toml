@@ -12,7 +12,6 @@ ignoreErrors = ["error-disable-taxonomy"]
 [params]
 description = "Film. Series. Books. Games. Music. One title, five pillars."
 favicon = "images/favicon.png"
-images = ["images/share.png"]
 title = "5PC®"
 pillars = ["film", "series", "books", "games", "music"]
 

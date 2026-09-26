@@ -3,6 +3,7 @@ title = "007 First Light"
 date = 2026-09-21
 release = 2026-05-27
 franchise = "007"
+description = "An origin story for James Bond, before the tuxedo and the licence to kill."
 +++
 
 007 First Light is an action-adventure game from IO Interactive, the

@@ -3,6 +3,7 @@ title = "Adele - Skyfall (2012)"
 date = 2026-09-22
 release = 2012-10-05
 franchise = "007"
+description = "Adele's Bond theme for the 2012 film. The first Bond song to win an Academy Award."
 +++
 
 "Skyfall" is the theme song for the 2012 James Bond film of the same name, performed by British singer Adele. It was written by Adele and producer Paul Epworth and features orchestration by J. A. C. Redford. It was recorded at Abbey Road Studios in London with a 77-piece orchestra.

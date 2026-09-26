@@ -3,6 +3,7 @@ title = "Game of Thrones"
 date = 2026-09-25
 release = 2011-04-17
 franchise = "game-of-thrones"
+description = "Eight seasons of fantasy politics, dragons, and betrayal. HBO's adaptation of George R.R. Martin's novels."
 +++
 
 Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire, the fantasy novel series by George R. R. Martin. The show premiered on April 17, 2011, and concluded on May 19, 2019, with 73 episodes across eight seasons. Set on the fictional continents of Westeros and Essos, it follows several story arcs at once: a war of succession for the Iron Throne among noble families, the exiled last descendant of the deposed Targaryen dynasty plotting her return, and the Night's Watch defending the realm from an ancient threat beyond the Wall. The series won 59 Primetime Emmy Awards, the most by a scripted primetime series, including Outstanding Drama Series four times.

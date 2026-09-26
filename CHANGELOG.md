@@ -5,12 +5,14 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 ## 2026-09-26
 
 ### Added
+- Descriptions in pillar post front matter (better OG/meta preview)
 - Custom footer: centered brand (Bluesky + X links), em dash, year with slashed zero, back-to-top anchor
 - Pillar post: Game of Thrones (series)
 - Franchise hub GoT: backlink to series post
 - Smooth scroll via CSS (prefers-reduced-motion)
 
 ### Removed
+- OG image (share.png) from config
 - Semantic versioning and GitHub releases
 - CSS from Web Interface Guidelines
 - Inline JS toggle

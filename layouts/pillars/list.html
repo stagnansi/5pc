@@ -16,7 +16,7 @@
     {{ with $s.GetPage (printf "/%s" .) }}
     {{ $pname := .Title }}
     {{ range .RegularPages }}
-    <li><span class="pillar-name">{{ $pname }}</span><span>→ <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
+    <li><span class="pillar-name">{{ $pname }}</span><span><span class="arrow">→</span> <a href="{{ .RelPermalink }}">{{ .Title }}</a></span></li>
     {{ end }}
     {{ end }}
     {{ end }}

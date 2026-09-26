@@ -129,6 +129,7 @@ Rules in custom_head.html:
 - content ul (except .blog-posts and .pillar-list): arrow markers with hanging indent
 - .pillar-list, .pillar-name: used by homepage and pillars index
 - blockquote: no italic, margin 0 (used for franchise index cards)
+- Favicon: static/images/favicon.png (custom, 2160x2160). No favicon.ico (removed, browser uses PNG).
 - .arrow: heading color, applied to all arrows across site
 - html: smooth scroll (prefers-reduced-motion)
 

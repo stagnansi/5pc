@@ -18,6 +18,7 @@ Stack: Hugo (static site generator) + Bear Blog theme (janraasch/hugo-bearblog).
 - GitHub: origin is stagnansi/5pc
 - Hugo version: 0.166.0+extended
 - Theme: hugo-bearblog (vendored in themes/)
+- No JavaScript in production (only livereload on dev server)
 
 ## Directory Structure
 
@@ -25,8 +26,6 @@ content/                  Markdown content
   _index.md              Homepage body
   about/                 About page
   blog/                  Essays
-    _index.md
-    <slug>.md
   film/                  Pillar: film
   series/                Pillar: series
   books/                 Pillar: books
@@ -34,13 +33,12 @@ content/                  Markdown content
   music/                 Pillar: music
   pillars/               Index of all pillar posts
   franchise/             Franchise hubs
-    _index.md
-    <id>/                e.g. 007/
-      _index.md          Hub content with franchise_id
+    <id>/                e.g. 007/, game-of-thrones/
 layouts/                 Site-level overrides (not in theme)
   _default/
-    list.html            Section lists
-    single.html          Pillar post template
+    baseof.html          Override: .Site.Language.Locale
+    list.html            Section lists with h1
+    single.html          Blog essays + pillar posts
   index.html             Homepage template
   about/list.html        About layout
   pillars/list.html      Pillars index with nav row + aligned list
@@ -50,26 +48,31 @@ layouts/                 Site-level overrides (not in theme)
     footer.html          Custom footer
 hugo.toml                Site config
 CHANGELOG.md             Changelog by date
+README.md                Project overview
 HANDOFF.md               This file
+audit.sh                 Audit script
 
 ## Work Rules
 
 Command style:
 - Single line, single purpose
 - Prefix with `p &&` (alias for `cd ~/5pc`)
-- For writing files: `printf '%b' ... > file` (not heredoc)
+- For writing files: `printf %b ... > file` (not heredoc)
 - For small edits: `sed -i`
 - Long output: `command > $TMPDIR/out.txt 2>&1 ; termux-clipboard-set < $TMPDIR/out.txt ; cat $TMPDIR/out.txt`
 
 Aliases in ~/.bashrc:
 - `p` = `cd ~/5pc`
 - `h` = `hugo server --noBuildLock`
+- `sc` = `termux-clipboard-set`
+- `gc` = `termux-clipboard-get`
 
 Hugo server is foreground. Kill with Ctrl+C before running other commands.
 
 Commit ritual:
 - Always update CHANGELOG.md in the same commit as code/content changes
-- Push to main after every milestone
+- Rewrite the entire CHANGELOG.md when adding entries (never append incrementally, causes duplicate section headers)
+- Push to main after every meaningful change
 
 ## Content Conventions
 
@@ -86,7 +89,7 @@ Punctuation:
 Blog essays:
 - Short titles (3-5 words). Follow existing pattern: "Why Bond Skipped TV", "A Robot Child on the Moon".
 - No headings inside body. Essay flows.
-- Bold, opinionated first-person voice. Herman's bearblog style.
+- Bold, opinionated first-person voice. Hermans bearblog style.
 
 Pillar posts:
 - Standard structure: intro paragraph, `## For Newcomers` (skip for music), `## The Story`.
@@ -95,9 +98,10 @@ Pillar posts:
 - Slug follows title, e.g. `adele-skyfall-2012`.
 
 Franchise hubs:
-- Front matter includes `franchise_id` and `description`.
+- Front matter includes `franchise_id`, `description`, and `date`.
 - Body sections: intro paragraph (no heading), `## For Newcomers`, `## Five Pillars`.
 - Five Pillars uses `<details>` blocks with `<ul>` lists, sorted by release year.
+- Description is short (under 100 chars) for card display on /franchise/.
 - Related Blogs section is auto-generated (via layout) filtered by `franchise` front matter on blog posts.
 
 ## Design System
@@ -112,7 +116,7 @@ Colors (in layouts/partials/custom_head.html):
 - color-scheme: light (dark mode disabled)
 
 Fonts:
-- --font-main: InterDisplay (headings)
+- --font-main: InterDisplay (headings, brand)
 - --font-secondary: Inter (body)
 - --font-mono: IBM Plex Mono (dates, list content)
 
@@ -120,16 +124,19 @@ Rules in custom_head.html:
 - .title h2: InterDisplay 900 (site title)
 - time: mono
 - .tagline a: heading color, solid underline in link color
-- footer: brand left, back-to-top arrow right
+- footer: centered, brand split (Bluesky + X), em dash opacity 50%, year with slashed zero, back-to-top arrow in link color
 - details summary: plus/minus toggle, hover changes color
-- content ul (except .blog-posts and grid): arrow markers with hanging indent
+- content ul (except .blog-posts and .pillar-list): arrow markers with hanging indent
+- .pillar-list, .pillar-name, .franchise-card: used by homepage and pillars index
+- html: smooth scroll (prefers-reduced-motion)
 
 ## Layout Overrides
 
 All in layouts/ (site-level, not in theme):
-- _default/list.html: adds h1, uses .blog-posts for post list
-- _default/single.html: pillar post template with h1, release date, franchise then pillar line
-- index.html: homepage with Latest Pillars, Latest Blogs, Featured Franchise
+- _default/baseof.html: copy of theme, uses .Site.Language.Locale instead of deprecated .Site.LanguageCode
+- _default/list.html: adds h1, uses .blog-posts for post list, release date fallback
+- _default/single.html: blog essays (h1 + date) and pillar posts (h1 + Released + franchise then pillar)
+- index.html: homepage with Latest Pillars, Latest Blogs, Featured Franchise (by date)
 - pillars/list.html: nav row + aligned list (grid with column-gap)
 - franchise/list.html: index shows cards; hub shows Related Blogs
 - about/list.html: h1 + content
@@ -138,21 +145,21 @@ All in layouts/ (site-level, not in theme):
 
 ## Current State
 
-As of v1.3.2 (2026-09-23):
+As of 2026-09-26:
 
 Content:
-- 2 pillar posts: 007 First Light (games), Adele - Skyfall (music)
+- 3 pillar posts: 007 First Light (games), Adele - Skyfall (music), Game of Thrones (series)
 - 2 blog essays: Why Bond Skipped TV, A Robot Child on the Moon
-- 1 franchise hub: James Bond 007 (full catalog across 5 pillars)
+- 2 franchise hubs: James Bond 007, Game of Thrones
 
 Site structure stable. Cloudflare auto-deploy on push.
 
 ## Pending Work
 
-- Many pillar posts are placeholders (listed in franchise hub 007 but no post yet)
-- UI library decision: considered classless CSS frameworks (Pico, Water, Simple) but not adopted. Custom CSS is the current approach.
-- No search feature (considered and dropped).
-- Franchise hubs other than 007 not started.
+- Many pillar posts are placeholders (listed in franchise hubs 007 and game-of-thrones but no post yet)
+- Franchise hubs other than 007 and Game of Thrones not started
+- No search feature (considered and dropped)
+- UI library: decided to skip (custom CSS is sufficient)
 
 ## Gotchas
 
@@ -170,12 +177,14 @@ Hugo:
 
 Layout:
 - baseof.html already wraps content in footer tag. Partial footer.html must not add another footer tag (nested).
+- site.Params.pillars in hugo.toml is the single source of pillar list. Do not hardcode inline slices in layouts.
 
 ## Rules for AI Assistants
 
 - Do not improvise. If a request is ambiguous, ask with concrete options before writing commands.
 - Do not overreach. If user asks to change one thing, change only that thing. Do not refactor adjacent code.
 - Never commit without updating CHANGELOG.md in the same commit.
+- Always rewrite the entire CHANGELOG.md when adding entries (never awk-append, causes duplicate headers).
 - Never skip the clipboard pipe on commands with long output.
 - Ask before deleting files or reverting user work.
 - The user has corrected earlier mistakes before. Read their feedback literally, do not interpret loosely.
@@ -190,26 +199,26 @@ In ~/.bashrc:
 
 ## Design Decisions (Why)
 
-- Footer stacked brand: user preference for vertical compact footer.
+- Footer centered horizontal: user preference. Brand split into two links (Five Pillars to Bluesky, Compendium to X), registered trademark symbol outside link.
 - No em dash: user style rule, applies to all writing including changelog and handoff.
 - Blog titles short: pattern established with "Why Bond Skipped TV".
 - Music title format "Artist - Song (Year)": distinguishes music pillar from other pillars.
 - No dark mode: user wants light only, forced via color-scheme and variable overrides.
+- No JS: site is static content, back-to-top uses native #top anchor with CSS smooth scroll.
+- No versioning: site is not an application. Changelog uses dates instead of SemVer.
+- site.Params.pillars: DRY single source for the five pillar types.
 
 ## Audit Command
 
-When user says "audit", run the standard audit script. Checks:
-- Duplicate content files (same slug pattern, or same title)
+When user says "audit", run: `p && bash audit.sh > $TMPDIR/audit.txt 2>&1 ; termux-clipboard-set < $TMPDIR/audit.txt ; cat $TMPDIR/audit.txt`
+
+Checks:
+- Duplicate content files (excluding _index.md)
+- Duplicate titles (excluding _index.md)
 - Duplicate CSS rules in custom_head.html
-- Unused layout files (not called by any template)
-- Unused partials
+- Layout files list
 - Unused static assets
-- Orphan content (posts not linked from any nav, hub, or homepage)
-- Duplicate front matter entries
-- Files in working tree not tracked or ignored
+- Orphan content (excluding blog essays, which are auto-listed)
+- Git status
 
 Report findings, do not auto-fix. Wait for user decision.
-
-### Changelog Updates
-
-Always rewrite the entire CHANGELOG.md when adding new entries. Never append incrementally (awk/sed append causes duplicate section headers). Read current CHANGELOG first, merge new entries into existing sections, write whole file.

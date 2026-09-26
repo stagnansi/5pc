@@ -127,7 +127,8 @@ Rules in custom_head.html:
 - footer: centered, brand split (Bluesky + X), em dash opacity 50%, year with slashed zero, back-to-top arrow in link color
 - details summary: plus/minus toggle, hover changes color
 - content ul (except .blog-posts and .pillar-list): arrow markers with hanging indent
-- .pillar-list, .pillar-name, .franchise-card: used by homepage and pillars index
+- .pillar-list, .pillar-name: used by homepage and pillars index
+- blockquote: no italic, margin 0 (used for franchise index cards)
 - html: smooth scroll (prefers-reduced-motion)
 
 ## Layout Overrides
@@ -138,7 +139,7 @@ All in layouts/ (site-level, not in theme):
 - _default/single.html: blog essays (h1 + date) and pillar posts (h1 + Released + franchise then pillar)
 - index.html: homepage with Latest Pillars, Latest Blogs, Featured Franchise (by date)
 - pillars/list.html: nav row + aligned list (grid with column-gap)
-- franchise/list.html: index shows cards; hub shows Related Blogs
+- franchise/list.html: index shows blockquote cards (no italic); hub shows Related Blogs
 - about/list.html: h1 + content
 - partials/custom_head.html: all site CSS and font links
 - partials/footer.html: footer structure (baseof already wraps in footer tag)

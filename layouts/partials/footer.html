@@ -1,11 +1,2 @@
-{{/* Footer partial. Rendered inside theme footer tag (see baseof.html). Contains brand links (Bluesky, X) and back-to-top anchor. Inline script toggles .is-scrollable on body for conditional arrow visibility. */}}
+{{/* Footer partial. Rendered inside theme footer tag (see baseof.html). Contains brand links to Bluesky and X. */}}
 <span class="footer-brand"><a href="https://bsky.app/profile/5pc.nordra.me">Five Pillars</a><br><a href="https://x.com/compppendium">Compendium</a>®</span>
-<a href="#top" class="to-top" aria-label="Back to top">↑</a>
-<script>
-(function(){
-  function check(){document.body.classList.toggle("is-scrollable", document.documentElement.scrollHeight > window.innerHeight);}
-  check();
-  window.addEventListener("resize", check);
-  window.addEventListener("load", check);
-})();
-</script>

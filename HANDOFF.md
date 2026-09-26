@@ -204,7 +204,6 @@ In ~/.bashrc:
 ## Design Decisions (Why)
 
 - Footer stacked brand: user preference for vertical compact footer.
-- Back-to-top via #top anchor: no JavaScript needed for the scroll action, only for conditional visibility.
 - No em dash: user style rule, applies to all writing including changelog and handoff.
 - Blog titles short: pattern established with "Why Bond Skipped TV".
 - Music title format "Artist - Song (Year)": distinguishes music pillar from other pillars.

@@ -29,7 +29,7 @@ The books are unfinished. Two more are planned. The television series finished i
 <details>
 <summary>Series</summary>
 <ul>
-<li><strong>Game of Thrones</strong> (2011-2019)</li>
+<li><strong><a href="/series/game-of-thrones/">Game of Thrones</a></strong> (2011-2019)</li>
 <li><strong>House of the Dragon</strong> (2022-present)</li>
 <li><strong>A Knight of the Seven Kingdoms</strong> (2026-present)</li>
 <li><strong>Aegon's Conquest</strong> (in development)</li>

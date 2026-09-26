@@ -8,14 +8,15 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Back-to-top arrow and inline JS toggle
 - Dead footer CSS (justify-content space-between)
 - Semantic versioning and GitHub releases (site is not an application)
+- Custom footer override (reverted to theme default)
+- CSS from Web Interface Guidelines (font smoothing, text-size-adjust, text-wrap balance)
 
 ### Added
 - Pillar post: Game of Thrones (series)
 - Franchise hub GoT: backlink to series post
 
 ### Changed
-- Background color: #fafafa (soft off-white)
-- CSS: font smoothing, text-size-adjust, text-wrap balance
+- Background color back to #fff (was #fafafa)
 - Homepage Featured Franchise: shows most recently added franchise (by date)
 - hugo.toml: pillars list moved to [params] (DRY)
 - Layouts: read pillars from site.Params.pillars instead of inline slices

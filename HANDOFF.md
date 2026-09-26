@@ -129,6 +129,7 @@ Rules in custom_head.html:
 - content ul (except .blog-posts and .pillar-list): arrow markers with hanging indent
 - .pillar-list, .pillar-name: used by homepage and pillars index
 - blockquote: no italic, margin 0 (used for franchise index cards)
+- .arrow: heading color, applied to all arrows across site
 - html: smooth scroll (prefers-reduced-motion)
 
 ## Layout Overrides
@@ -136,7 +137,7 @@ Rules in custom_head.html:
 All in layouts/ (site-level, not in theme):
 - _default/baseof.html: copy of theme, uses .Site.Language.Locale instead of deprecated .Site.LanguageCode
 - _default/list.html: adds h1, uses .blog-posts for post list, release date fallback
-- _default/single.html: blog essays (h1 + date) and pillar posts (h1 + Released + franchise then pillar)
+- _default/single.html: blog essays (h1 + date); pillar posts (h1 + Released + franchise/pillar breadcrumb + "More in [Franchise]" section with sibling posts)
 - index.html: homepage with Latest Pillars, Latest Blogs, Featured Franchise (by date)
 - pillars/list.html: nav row + aligned list (grid with column-gap)
 - franchise/list.html: index shows blockquote cards (no italic); hub shows Related Blogs
@@ -149,7 +150,7 @@ All in layouts/ (site-level, not in theme):
 As of 2026-09-26:
 
 Content:
-- 3 pillar posts: 007 First Light (games), Adele - Skyfall (music), Game of Thrones (series)
+- 4 pillar posts: 007 First Light (games), Adele - Skyfall (music), Game of Thrones (series), House of the Dragon (series)
 - 2 blog essays: Why Bond Skipped TV, A Robot Child on the Moon
 - 2 franchise hubs: James Bond 007, Game of Thrones
 

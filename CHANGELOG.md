@@ -5,6 +5,7 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 ## 2026-09-26
 
 ### Added
+- New favicon (fivepillarscompendium.png), replaced default Bear favicon
 - Pillar post: House of the Dragon (series)
 - Franchise hub GoT: backlink to House of the Dragon
 - Section "More in [Franchise]" on pillar posts, using pillar-list format
@@ -16,6 +17,7 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Smooth scroll via CSS (prefers-reduced-motion)
 
 ### Removed
+- Default favicon.ico
 - OG image from config and unused share.png
 - Semantic versioning and GitHub releases
 - CSS from Web Interface Guidelines

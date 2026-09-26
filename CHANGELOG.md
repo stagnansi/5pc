@@ -4,29 +4,29 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 
 ## 2026-09-26
 
-### Removed
-- Back-to-top arrow and inline JS toggle
-- Dead footer CSS (justify-content space-between)
-- Semantic versioning and GitHub releases (site is not an application)
-- Custom footer override (reverted to theme default)
-- CSS from Web Interface Guidelines (font smoothing, text-size-adjust, text-wrap balance)
-
 ### Added
+- Custom footer: centered brand (Bluesky + X links), em dash, year with slashed zero, back-to-top anchor
 - Pillar post: Game of Thrones (series)
 - Franchise hub GoT: backlink to series post
 
+### Removed
+- Semantic versioning and GitHub releases (site is not an application)
+- CSS from Web Interface Guidelines (font smoothing, text-size-adjust, text-wrap balance)
+- Inline JS toggle (footer arrow now uses native #top anchor)
+
 ### Changed
-- Background color back to #fff (was #fafafa)
+- Background color back to #fff
+- Footer: centered custom (InterDisplay 900 for brand, font-main for year, link-color arrow)
 - Homepage Featured Franchise: shows most recently added franchise (by date)
 - hugo.toml: pillars list moved to [params] (DRY)
 - Layouts: read pillars from site.Params.pillars instead of inline slices
-- audit.sh: reduce false positives and standards compliance (set -euo pipefail, quoted variables, read loop)
+- audit.sh: reduce false positives and standards compliance
 - Layout files: header comments for documentation
-- single.html: nested if merged with and() for readability
+- single.html: nested if merged with and()
 
 ### Fixed
 - Pillar list: double arrow after inline style refactor
-- Deprecation warning: .Site.LanguageCode replaced by .Site.Language.Locale via baseof override
+- Deprecation warning: .Site.LanguageCode replaced by .Site.Language.Locale
 
 ## 2026-09-23
 
@@ -42,14 +42,14 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Pillar post metadata: split into two lines, add franchise backlink with title
 - Music pillar slug follows title format: adele-skyfall-2012
 - Franchises index description: removed em dash
-- About rewrite in first-person voice with contact links (email, Bluesky)
+- About rewrite in first-person voice with contact links
 - Blog essay: changed editorial "we" to third person
 
 ## 2026-09-22
 
 ### Added
 - Franchise hub: James Bond 007 with full catalog across five pillars
-- Related Blogs section in franchise hubs (filtered by franchise front matter)
+- Related Blogs section in franchise hubs
 
 ## 2026-09-21
 
@@ -58,18 +58,17 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - First pillar post: 007 First Light (games)
 - Blog essay: Why Bond Skipped TV
 - Site-wide custom_head: Inter Display, Inter, IBM Plex Mono fonts
-- single.html override: h1 + Released date + pillar backlink for pillar posts
+- single.html override: h1 + Released date + pillar backlink
 - list.html override: release date fallback to publish date
-- Footer: stacked brand (Bluesky + X links)
 - Homepage: tagline, Latest Pillars, Latest Blogs, Featured Franchise
 - Global arrow markers for content lists
 
 ### Changed
 - Brand rule: 5PC and Five Pillars Compendium always written with ®
-- hugo.toml: timeZone Asia/Jakarta (fixes future-dated posts not rendering)
+- hugo.toml: timeZone Asia/Jakarta
 - Force light mode site-wide
-- Link color and visited color: #0000ff
-- Site title: InterDisplay 900
+- Link color #0000ff
+- Site title InterDisplay 900
 
 ### Fixed
 - Future-dated posts not rendering

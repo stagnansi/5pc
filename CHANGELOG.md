@@ -5,6 +5,7 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 ## 2026-09-26
 
 ### Added
+- Section "More in [Franchise]" on pillar posts (cross-link to sibling posts)
 - Descriptions in pillar post front matter (better OG/meta preview)
 - Custom footer: centered brand (Bluesky + X links), em dash, year with slashed zero, back-to-top anchor
 - Pillar post: Game of Thrones (series)
@@ -16,11 +17,13 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 - Semantic versioning and GitHub releases
 - CSS from Web Interface Guidelines
 - Inline JS toggle
+- Franchise card wrapper div and CSS (replaced by blockquote)
 
 ### Changed
 - Background color back to #fff
 - Footer: centered custom
-- Franchise 007 description shortened for card display (line-clamp removed)
+- Franchise index cards: blockquote layout, no italic, margin reset
+- Franchise 007 description shortened for card display
 - Homepage Featured Franchise: shows most recently added franchise
 - hugo.toml: pillars list moved to [params]
 - Layouts: read pillars from site.Params.pillars
@@ -30,6 +33,7 @@ All notable changes to 5PC® (Five Pillars Compendium®) will be documented in t
 
 ### Fixed
 - Pillar list: double arrow after inline style refactor
+- Related posts: template now uses where chain (Hugo range assignment does not persist outside loop)
 - Deprecation warning: .Site.LanguageCode replaced by .Site.Language.Locale
 
 ## 2026-09-23

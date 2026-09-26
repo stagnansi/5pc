@@ -5,11 +5,11 @@
   {{ .Content }}
   {{ if eq .RelPermalink "/franchise/" }}
   {{ range .Sections }}
-  <div class="franchise-card">
+  <blockquote>
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
   <p>{{ .Params.description }}</p>
   <p><a href="{{ .RelPermalink }}">Explore</a> →</p>
-  </div>
+  </blockquote>
   {{ end }}
   {{ else }}
   {{ $fid := .Params.franchise_id }}

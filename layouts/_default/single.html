@@ -1,4 +1,4 @@
-{{/* Single page template. Two branches: blog essays (h1 + date) and pillar posts (h1 + release date + franchise/pillar breadcrumb). Pillar branch triggers for types listed in site.Params.pillars. */}}
+{{/* Single page template. Blog essays (h1 + date). Pillar posts (h1 + Released + franchise then pillar + related pillar posts in same franchise). */}}
 {{ define "main" }}
 {{ if and (eq .Type "blog") (not .Params.menu) }}
 <h1>{{ .Title }}</h1>
@@ -25,6 +25,31 @@
 <content>
   {{ .Content }}
 </content>
+{{ if in site.Params.pillars .Type }}
+{{ $fid := .Params.franchise }}
+{{ $currentPermalink := .Permalink }}
+{{ if $fid }}
+{{ $all := where .Site.RegularPages "Params.franchise" $fid }}
+{{ $related := where $all "Type" "in" site.Params.pillars }}
+{{ if gt (len $related) 1 }}
+<h2>More in {{ with site.GetPage (printf "/franchise/%s" $fid) }}{{ .Title }}{{ else }}{{ $fid }}{{ end }}</h2>
+<ul class="blog-posts">
+{{ range sort $related "Date" "desc" }}
+{{ if ne .Permalink $currentPermalink }}
+<li>
+  <span>
+    <i>
+      {{ if .Params.release }}<time datetime='{{ .Params.release }}'>{{ (time .Params.release).Format "2006.01.02" }}</time>{{ else }}<time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>{{ end }}
+    </i>
+  </span>
+  <a href="{{ .Permalink }}">{{ .Title }}</a>
+</li>
+{{ end }}
+{{ end }}
+</ul>
+{{ end }}
+{{ end }}
+{{ end }}
 {{ if and (eq .Type "blog") (.Param "enablePostNavigator") }}
 {{- partial "post_navigator.html" . -}}
 {{ end }}

@@ -37,11 +37,11 @@
   {{ with .Sections }}
   <h2>Featured Franchise</h2>
   {{ range first 1 .ByDate.Reverse }}
-  <div class="franchise-card">
+  <blockquote>
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
   <p>{{ .Params.description }}</p>
   <p><a href="{{ .RelPermalink }}">Explore</a> →</p>
-  </div>
+  </blockquote>
   {{ end }}
   {{ end }}
   {{ end }}

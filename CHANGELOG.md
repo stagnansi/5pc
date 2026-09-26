@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+- Back-to-top arrow and inline JS toggle
+- Dead footer CSS (justify-content space-between)
+
 ## [1.5.2] - 2026-09-26
 
 ### Added

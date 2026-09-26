@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Pillar post: Game of Thrones (series)
+- Franchise hub GoT: backlink to series post
+
 ### Changed
 - Background color: #fafafa (soft off-white)
 - CSS: font smoothing, text-size-adjust, text-wrap balance
